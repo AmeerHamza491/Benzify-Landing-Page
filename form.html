@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get a Free Quote | Benzify</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-card2 {
+      padding: 60px 20px;
+    }
+
+    .main-card2 h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .main-card2 p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .main-client-card {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card1, .card2 {
+      display: flex;
+      gap: 20px;
+      animation: moveCards 25s ease-in-out infinite;
+    }
+
+    .card2 {
+      animation-direction: reverse;
+    }
+
+    .card1:hover,
+    .card2:hover {
+      animation-play-state: paused;
+    }
+
+    .client-card {
+      background: linear-gradient(145deg, #666666, #4d4d4d);
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      min-height: 220px;
+      text-align: center;
+      transition: 0.4s ease;
+    }
+
+    .client-card:hover {
+      transform: translateY(-10px);
+      background: linear-gradient(145deg, #727272, #545454);
+    }
+
+    .client-card h1 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .client-card p {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    .client-card small {
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+
+    @keyframes moveCards {
+      0%   { transform: translateX(0); }
+      25%  { transform: translateX(10%); }
+      50%  { transform: translateX(-10%); }
+      75%  { transform: translateX(5%); }
+      100% { transform: translateX(0); }
+    }
+
+  form {
+      max-width: 600px;
+      margin: 60px auto 0;
+      background-color: #1f1f1f;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    form h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-control,
+    .form-select {
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+      color: #fff;
+    }
+
+    .form-control::placeholder {
+      color: #aaa;
+    }
+
+    .btn-submit {
+      background-color: #4803a8;
+      border: none;
+      padding: 12px 30px;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .btn-submit:hover {
+      background-color: #5e2ae8;
+    }
+
+    @media(max-width: 768px) {
+      .card1, .card2 {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+
+
+     .main-header {
+    background-color: #ffffff !important; /* solid black */
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    z-index: 1030;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+
+  .nav-link {
+    color: #000000 !important; /* white text */
+    margin: 0 10px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background-color: #000000 !important; /* red background */
+    color: #ffffff !important; /* black text on hover */
+    transform: scale(1.05);
+  }
+
+  .hover-btn {
+    background-color: transparent;
+    color: #000000 !important;
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .hover-btn:hover {
+    background-color: #000000;
+    color: #ffffff !important;
+    transform: scale(1.05);
+    border-color: #030303;
+  }
+
+  </style>
+</head>
+<body>
+
+    <!-- ✅ Add inside your <body> -->
+<header class="main-header fixed-top bg-transparent py-3">
+  <div class="container-fluid px-4">
+    <div class="d-flex justify-content-between align-items-center">
+      
+      <!-- Left nav -->
+      <ul class="nav d-none d-lg-flex">
+        <li class="nav-item">
+          <a class="nav-link text-white hover-effect" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white hover-effect" href="#">Services</a>
+        </li>
+      </ul>
+
+      <!-- Center Logo -->
+      <a href="#" class="navbar-brand mx-auto">
+        <img src="image/benzify.png" alt="Logo" height="60">
+      </a>
+
+      <!-- Right nav -->
+      <ul class="nav d-none d-lg-flex">
+        <li class="nav-item">
+          <a class="nav-link text-white hover-effect" href="#">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-light rounded-pill px-4 hover-btn" href="index.html">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button class="navbar-toggler d-lg-none text-white border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+  <!-- ⭐ Benzify Service Bundles -->
+  <div class="main-card2">
+    <h1>Benzify Service Bundles</h1>
+    <p>Save up to <strong>15%</strong> when you bundle services.</p>
+
+    <div class="main-client-card">
+      <div class="card1">
+        <div class="client-card">
+          <h1>Start‑Up Booster</h1>
+          <p>
+            $950 <br />
+            <small><s>$1,098</s> | Save 13%</small><br />
+            Starter Website, Local SEO (5 Keywords), Logo + Brand Kit
+          </p>
+        </div>
+        <div class="client-card">
+          <h1>Growth Acceleration</h1>
+          <p>
+            $2,100 <br />
+            <small><s>$2,448</s> | Save 14%</small><br />
+            Pro Website, SEO Boost (15 Keywords), Ads, Copywriting
+          </p>
+        </div>
+        <div class="client-card">
+          <h1>Dominate & Scale</h1>
+          <p>
+            $3,950 <br />
+            <small><s>$4,648</s> | Save 15%</small><br />
+            Premium Site, SEO (30+ Keywords), Ads, Full Branding
+          </p>
+        </div>
+        <div class="client-card">
+          <h1>SaaS Launchpad</h1>
+          <p>
+            $4,750 <br />
+            <small><s>$5,550</s> | Save 14%</small><br />
+            Custom SaaS App, UI Design, Free Hosting + SSL
+          </p>
+        </div>
+      </div>
+
+      <div class="card2">
+        <div class="client-card">
+          <h1>Custom Bundles</h1>
+          <p>
+            Mix & match 2+ services<br />
+            Up to 15% off on your own combo<br />
+            Tailored for your business needs
+          </p>
+        </div>
+        <div class="client-card">
+          <h1>Need Help?</h1>
+          <p>
+            Talk to us for bundle consultation<br />
+            We’ll guide you to the perfect set<br />
+            That matches your budget & goals
+          </p>
+        </div>
+        <div class="client-card">
+          <h1>Limited Time Offer</h1>
+          <p>
+            Seasonal discounts available<br />
+            Act before it ends!<br />
+            Save more with early decision
+          </p>
+        </div>
+        <div class="client-card">
+          <h1>Let’s Get Started</h1>
+          <p>
+            Choose a bundle<br />
+            Or create your own<br />
+            <strong>Grow with Benzify</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⭐ Contact Form -->
+ <form id="quoteForm">
+    <h2>Request a Free Quote</h2>
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Your name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" id="phone" placeholder="123-456-7890" required>
+    </div>
+    <div class="mb-3">
+      <label for="package" class="form-label">Select Package</label>
+      <select class="form-select" id="package" required>
+        <option value="">-- Select --</option>
+        <option value="Startup">Start‑Up Booster</option>
+        <option value="Growth">Growth Acceleration</option>
+        <option value="Scale">Dominate & Scale</option>
+        <option value="SaaS">SaaS Launchpad</option>
+        <option value="Custom">Custom Bundle</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="note" class="form-label">Note</label>
+      <textarea class="form-control" id="note" rows="3" placeholder="Tell us anything extra..."></textarea>
+    </div>
+    <button type="submit" class="btn-submit">Submit</button>
+  </form>
+
+
+<footer class="bg-darks text-white py-4 mt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Company Info -->
+      <div class="col-md-4 mb-3">
+        <h5>Benzify</h5>
+        <p>
+          Digital Growth Agency<br>
+          United States<br>
+          <a href="mailto:hello@benzify.com" class="text-white">hello@benzify.com</a>
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact / CTA -->
+      <div class="col-md-4">
+        <h5>Get In Touch</h5>
+        <p>Have questions? <a href="#quoteForm" class="text-warning text-decoration-none">Request a Quote</a></p>
+      </div>
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center small">
+      &copy; 2025 Benzify. All rights reserved.
+    </div>
+  </div>
+</footer>
+</body>
+</html>
